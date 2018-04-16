@@ -11,12 +11,10 @@ class VendorsController < ApplicationController
   def edit
   	@vendor = Vendor.find(params[:id])
   end
-
+  
   def update
   	@vendor = Vendor.find(params[:id])
   	@vendor = @vendor.update(params[:name])
-  end
-
-  def destroy
+  	redirect_to vendor_path(@vendor)
   end
 end
