@@ -1,0 +1,15 @@
+<ul>	
+<li><%= @vendor.name %></li>
+<% @vendor.sweets.each do |sweet| %>
+<li><%= sweet.name %></li>
+<% end %>
+</ul>
+
+<%= form_for @sweet do |f| %>
+	<%= select_tag (:sweet_id) %>
+	<%= f.label "Comment" %>
+	<%= f.text_field %>
+	<%= f.submit %>
+<% end %>
+
+

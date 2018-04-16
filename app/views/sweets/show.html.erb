@@ -1,0 +1,6 @@
+<ul>	
+<li><%= @sweet.name %></li>
+<%= Sweet.all.each do |sweet| %>
+	<li> <%= link_to sweet, vendor_path(sweet.id) %></li>
+<% end %>
+</ul>
