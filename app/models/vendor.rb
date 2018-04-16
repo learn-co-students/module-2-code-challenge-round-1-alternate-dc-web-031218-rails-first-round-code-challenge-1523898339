@@ -1,6 +1,6 @@
 class Vendor < ApplicationRecord
 	validates :name, presence: true
-
 	
-	has_and_belongs_to_many :vendors
+	has_many :vendor_sweets
+	has_many :sweets, through: :vendor_sweets
 end

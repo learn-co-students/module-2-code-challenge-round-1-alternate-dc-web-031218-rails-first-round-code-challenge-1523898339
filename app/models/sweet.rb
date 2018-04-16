@@ -3,5 +3,6 @@ class Sweet < ApplicationRecord
 	validates :name, uniqueness: true
 	validates :comment, presence: true
 
-	has_and_belongs_to_many :vendors
+	has_many :vendors, through: :sweets_vendors
+	has_many :sweets_vendors
 end
